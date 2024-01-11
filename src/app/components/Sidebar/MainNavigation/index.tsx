@@ -6,7 +6,7 @@ import {
   SquareStack,
   Users,
 } from 'lucide-react'
-import { NavItem } from './NavItem'
+import { NavItem } from '../NavItem'
 
 export function MainNavigation() {
   return (
