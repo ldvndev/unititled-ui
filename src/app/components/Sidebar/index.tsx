@@ -3,6 +3,7 @@ import { Logo } from './Logo'
 import { MainNavigation } from './MainNavigation'
 import { NavItem } from './NavItem'
 import { UseSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
 
 export function Sidebar() {
   return (
@@ -26,6 +27,10 @@ export function Sidebar() {
         </nav>
 
         <UseSpaceWidget />
+
+        <div className="h-px bg-zinc-200" />
+
+        <Profile />
       </div>
     </aside>
   )
