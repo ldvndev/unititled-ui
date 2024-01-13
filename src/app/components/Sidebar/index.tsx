@@ -13,7 +13,7 @@ import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { UseSpaceWidget } from './UsedSpaceWidget'
 import { Profile } from './Profile'
-import * as Input from './Input'
+import * as Input from '../Input'
 
 export function Sidebar() {
   return (
