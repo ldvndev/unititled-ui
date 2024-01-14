@@ -18,6 +18,12 @@ const config: Config = {
         6: '6px',
       },
 
+      colors: {
+        violet: {
+          25: '#fcfaff',
+        },
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
