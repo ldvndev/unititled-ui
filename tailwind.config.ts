@@ -14,6 +14,10 @@ const config: Config = {
         app: '700px',
       },
 
+      borderWidth: {
+        6: '6px',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
