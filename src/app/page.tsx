@@ -1,9 +1,10 @@
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { SettingsTabs } from './components/SettingsTabs'
 import * as Input from './components/Input'
 import * as FileInput from './components/Form/FileInput'
 import { Select } from './components/Form/Select'
 import { SelectItem } from './components/Form/Select/SelectItem'
+import { Textarea } from './components/Form/Textarea'
 
 export default function Home() {
   return (
@@ -59,7 +60,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="email"
               className="text-sm font-medium text-zinc-700"
@@ -78,7 +79,7 @@ export default function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="photo"
               className="text-sm font-medium text-zinc-700"
@@ -95,7 +96,7 @@ export default function Home() {
             </FileInput.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
@@ -104,7 +105,7 @@ export default function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="country"
               className="text-sm font-medium text-zinc-700"
@@ -118,7 +119,7 @@ export default function Home() {
             <div />
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="timezone"
               className="text-sm font-medium text-zinc-700"
@@ -134,17 +135,69 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
               Bio
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
                 Write a short introductions.
               </span>
             </label>
-            <div />
+            <div className="space-y-5">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem
+                    value="normal"
+                    defaultChecked
+                    text="Normal text"
+                  />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <Textarea
+                id="bio"
+                defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialist in UX/UI design, brand strategy, and Web-flow development "
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5    ">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="projects"
               className="text-sm font-medium text-zinc-700"
