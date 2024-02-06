@@ -1,0 +1,1 @@
+<p>Untitled-ui form registration project using Tailwind with Next.js, aiming to learn Tailwind.</p>
